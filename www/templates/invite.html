@@ -1,0 +1,56 @@
+<ion-view title="Invite">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-content class="invite">
+        <div class="row">
+          <div class="col col-50 col-offset-25">
+            <h4>Invite a friend and get bonus points!</h4>
+          </div>
+        </div>
+        <div class="list">
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Phone Number</span>
+            <input type="tel" placeholder="Friends Phone Number">
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Name</span>
+            <input type="text" placeholder="Friends Name" ng-model="name">
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Personal Message</span>
+            <textarea rows="9">
+Hi {{ name }},
+
+I've been using mPaani and its great. Would like you to try it as well.
+
+Regards,
+            </textarea>
+          </label>
+        </div>
+        <div class="share">
+          <div class="row">
+            <div class="col col-offset-10 col-20">
+              <img src="img/share/facebook.png" />
+            </div>
+            <div class="col col-offset-10 col-20">
+              <img src="img/share/google-plus.png" />
+            </div>
+            <div class="col col-offset-10 col-20">
+              <img src="img/share/mail.png" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col col-offset-10 col-20">
+              <img src="img/share/sms.png" />
+            </div>
+            <div class="col col-offset-10 col-20">
+              <img src="img/share/twitter.png" />
+            </div>
+            <div class="col col-offset-10 col-20">
+              <img src="img/share/hangouts.png" />
+            </div>
+          </div>
+        </div>
+    </ion-content>
+</ion-view>

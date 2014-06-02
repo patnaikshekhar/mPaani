@@ -1,0 +1,17 @@
+<ion-view title="Offers">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-content class="offers">
+        <div class="list" >
+            <a class="item item-thumbnail-left" href="#" ng-repeat="offer in offers">
+              <img src="img/vendors/{{ offer.vendor }}.jpg" />
+              <h5>{{ offer.description }}</h5>
+              <p>Ends {{ offer.end }}</p>
+              <span class="badge badge-balanced" ng-if="t.points > 0">
+                +{{ offer.points }}
+              </span>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

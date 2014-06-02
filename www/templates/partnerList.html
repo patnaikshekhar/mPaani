@@ -1,0 +1,34 @@
+<ion-view title="MNOs">
+    <ion-nav-buttons side="left">
+        <button class="button" ng-click="back()">
+            <i class="icon ion-ios7-arrow-back"></i> Back
+        </button>
+    </ion-nav-buttons>
+    <ion-content class="partnerList">
+        <ion-slide-box on-slide-changed="slideHasChanged($index)">
+            <ion-slide ng-repeat="partner in partnerList">
+                <div class="box">
+                    <div class="list card">
+                        <div class="item item-divider">
+                            <h2>{{ partner.name }}</h2>
+                        </div>
+
+                        <div class="item item-image">
+                            <img src="img/vendors/{{ partner.image }}">
+                        </div>
+
+                        <div class="item" ng-repeat="offer in partner.offers">
+                            <h2>{{ offer.description }}</h2>
+                            <span class="badge badge-balanced">
+                                +{{ offer.points }}
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h1></h1>
+                    </div>
+                </div>
+            </ion-slide>
+        </ion-slide-box>
+    </ion-content>
+</ion-view>

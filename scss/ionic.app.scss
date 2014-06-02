@@ -1,0 +1,122 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #4a87ee !default;
+$calm:                            #43cee6 !default;
+$balanced:                        #66cc33 !default;
+$energized:                       #f0b840 !default;
+$assertive:                       #ef4e3a !default;
+$royal:                           #8a6de9 !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+// Define Swatch for Flat UI Colors
+$turquoise: #1abc9c;
+$greensea: #16a085;
+$sunflower: #f1c616;
+$orange: #f39c12;
+$emerald: #2ecc71;
+$nephritis: #27ae60;
+$carrot: #e67e22;
+$pumpkin: #d35400;
+$peterriver: #3498db;
+$belizehole: #2980b9;
+$alizarin: #e74c3c;
+$pomegranate: #c0392b;
+$amethyst: #9b59b6;
+$wisteria: #8e44ad;
+$clouds: #ecf0f1;
+$silver: #bdc3c7;
+$wetasphalt: #34495e;
+$midnightblue: #2c3e50;
+$concrete: #95a5a6;
+$asbestos: #7f8c8d;
+
+.login {
+    background-color: $midnightblue;
+
+    h1 {
+        color: $peterriver;
+    }
+}
+
+.login-center {
+
+    img {
+        width: 200px;
+        height: 30px;
+    }
+
+    text-align: center;
+    margin-top: 50%;
+    margin-bottom: 50%;
+}
+
+.dashboard {
+
+    .row {
+        text-align: center;
+        .big-font {
+            font-size: 5em;
+        }
+    }
+
+    .dashboard-figure {
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+}
+
+.share {
+    img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.dashboard {
+    .big-font {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    h4 {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    h5 {
+        margin-bottom: 5px;
+    }
+
+    .row {
+        max-height: 220px;
+    }
+}
+
+.partners {
+    margin-top: 12%;
+    .item-image img {
+        height: 115px;
+        width: 120px;
+    }
+}
+
+.partnerList {
+    .card {
+        img {
+            height: 200px;
+        }
+    }
+}

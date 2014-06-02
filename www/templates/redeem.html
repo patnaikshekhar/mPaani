@@ -1,0 +1,23 @@
+<ion-view title="Redeem">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-content class="redeem">
+        <div class="list">
+
+            <a class="item item-thumbnail-left" href="#/app/home/redeemDetails" ng-repeat="reward in rewards">
+              <img src="img/vendors/{{ reward.vendor }}.jpg" />
+              <div class="row">
+                <div class="col-75">
+                  <h4>{{ reward.description }}</h4>
+
+                  <span class="badge badge-calm">
+                    {{ reward.points }}
+                  </span>
+                </div>
+              </div>
+            </a>
+        </div>
+        <div ng-repeat-end></div>
+    </ion-content>
+</ion-view>

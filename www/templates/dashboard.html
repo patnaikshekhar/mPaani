@@ -1,0 +1,72 @@
+<ion-view title="Home">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-positive" ng-click="showModal()">
+            Share
+        </button>
+    </ion-nav-buttons>
+
+    <ion-content class="has-header dashboard">
+        <div class="row">
+            <div class="col col-33 col-offset-33">
+                <h5>You have</h5>
+                <h1 class="big-font">{{ points }}</h1>
+                <h4>Points</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h6><span class="dashboard-figure">25</span> Friends Invited</h6>
+                <input type="text" value="25" class="dial" data-min="0" data-max="50" data-width="120" data-fgColor="#e67e22" data-displayInput=false data-readOnly=true>
+            </div>
+
+            <div class="col">
+                <h6><span class="dashboard-figure">1000</span> Points Redeemed</h6>
+                <input type="text" value="1000" class="dial" data-min="0" data-max="5000" data-width="120" data-fgColor="#3498db" data-displayInput=false data-readOnly=true>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h6><span class="dashboard-figure">5</span> Points gained this Month</h6>
+                <input type="text" value="5" class="dial" data-min="0" data-max="50" data-width="120" data-fgColor="#34495e" data-displayInput=false data-readOnly=true>
+            </div>
+
+            <div class="col">
+                <h6><span class="dashboard-figure">7</span> Offers Availed</h6>
+                <input type="text" value="7" class="dial" data-min="0" data-max="50" data-width="120" data-fgColor="#e74c3c" data-displayInput=false data-readOnly=true>
+            </div>
+        </div>
+    </ion-content>
+
+    <script id="modal.html" type="text/ng-template">
+      <div class="modal">
+        <ion-header-bar class="bar bar-header bar-positive">
+          <h1 class="title">Share</h1>
+          <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+        </ion-header-bar>
+        <ion-content>
+          <div class="padding">
+            <div class="list">
+              <label class="item item-input">
+                <span class="input-label">Phone Number</span>
+                <input ng-model="phone" type="text">
+              </label>
+              <label class="item item-input">
+                <span class="input-label">Confirm Phone</span>
+                <input ng-model="confirmPhone" type="text">
+              </label>
+              <div class="item range range-positive">
+                <span>0</span>
+                <input type="range" name="volume" min="0" max="90" value="20">
+                <span>90</span>
+              </div>
+              <button class="button button-full button-positive" ng-click="share()">Share Points</button>
+            </div>
+          </div>
+        </ion-content>
+      </div>
+    </script>
+</ion-view>

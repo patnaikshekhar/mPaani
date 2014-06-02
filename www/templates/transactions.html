@@ -1,0 +1,25 @@
+<ion-view title="Transactions">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-content class="transactions">
+        <div class="list" ng-repeat-start="transaction in transactions">
+            <div class="item item-divider">
+              {{ transaction.month }}
+            </div>
+
+            <a class="item item-thumbnail-left" href="#" ng-repeat="t in transaction.transactions">
+              <img src="img/vendors/{{ t.vendor }}.jpg" />
+              <h2>{{ t.description }}</h2>
+              <p>{{ t.date }}</p>
+              <span class="badge badge-assertive" ng-if="t.points < 0">
+                {{ t.points }}
+              </span>
+              <span class="badge badge-balanced" ng-if="t.points > 0">
+                +{{ t.points }}
+              </span>
+            </a>
+        </div>
+        <div ng-repeat-end></div>
+    </ion-content>
+</ion-view>
